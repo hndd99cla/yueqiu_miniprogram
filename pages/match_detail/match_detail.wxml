@@ -1,0 +1,41 @@
+ 
+<image class="post" src="{{matchList.match_post}}"/>
+
+<view class="type">
+<view class="typetext">{{matchList.match_name}}</view>
+</view>
+
+<view class="time">
+<view class="timetext">比赛时间：{{matchList.match_date}} 至 {{matchList.match_overdate}}</view>
+</view>
+
+<view class="position">
+<view class="positiontext">比赛地点：{{matchList.match_location}}</view>
+<image src="/images/location.png" class="location"></image>
+</view>
+
+<view class="time">
+<view class="timetext">承办单位：{{matchList.match_unit}}</view>
+</view>
+
+<view class="time">
+<view class="timetext">联系电话：{{matchList.match_phone}}</view>
+</view>
+
+
+
+<view class="intro">
+  <view class="intro1"><text class="text">赛事说明：{{matchList.match_explain}}</text></view>
+  </view>
+
+<navigator hover-class="none" url='/pages/match_detail_plus/match_detail_plus?id={{id}}'>
+  <view class="intro" style='display:flex'>
+  <view class="intro1"><text class="text">赛事详情数据</text></view>
+  <view class="arrow"/>
+  </view>
+  </navigator>
+
+ <view class="btn_view">
+ <button class="btn_" bindtap='join'>报名</button>
+
+ </view>

@@ -1,0 +1,66 @@
+ <view bindtap='uploadPost' class="postview">
+ <view class="word" wx:if="{{mark}}">请上传赛事海报</view>
+ <image src="{{post}}" class="post"></image>
+ </view>
+<view class="container">
+    <form bindsubmit="bindSubmit">
+    <view class="form-box">
+ 
+        <view class="row-wrap">
+            <view class="label">赛事名称</view>
+            <view class="label-right">
+                <input name="matchName" class="input" placeholder="请填写赛事名称"/>
+            </view>
+        </view>
+
+        <view class="row-wrap" bindtap="selectLocation">
+            <view class="label">地点</view>
+            <view class="label-right">
+                <input name="setLocation" disabled='true' class="input" placeholder="您的位置" value="{{mylocation}}"/>
+            </view>           
+        </view>
+
+      <picker value="{{date}}" mode="date" start="{{now}}" end="{{endDate}}" bindchange="changeDate">
+        <view class="row-wrap">
+            <view class="label">开始日期</view>
+            <view class="label-right">
+                <input disabled="true" name="startDate" class="input" type="text" placeholder="开始的日期" value="{{date}}"/>
+            </view>
+        </view>
+      </picker>
+
+      <picker value="{{date}}" mode="date" start="{{date}}" end="{{endDate}}" bindchange="changeDate_">
+        <view class="row-wrap">
+            <view class="label">结束日期</view>
+            <view class="label-right">
+                <input disabled="true" name="overDate" class="input" type="text" placeholder="结束的日期" value="{{date_}}"/>
+            </view>
+        </view>
+      </picker>
+
+       <view class="row-wrap">
+            <view class="label">承办单位</view>
+            <view class="label-right">
+                <input name="matchUnit" class="input" placeholder="请填写承办单位名称"/>
+            </view>
+        </view>
+
+        <view class="row-wrap">
+            <view class="label">联系电话</view>
+            <view class="label-right">
+                <input name="matchPhone" class="input" maxlength="11" type="number" placeholder="11位手机号码"/>
+            </view>
+        </view>
+
+        <view class="explain">
+            <view class="">赛事说明</view>
+            <view class="explain-down">
+                <textarea name="matchExplain" type="text" style='width:690rpx'/>
+            </view>
+         </view>
+
+    </view>
+
+    <button type="warn" class="save-btn" formType="submit">提交审核</button>
+    </form>
+</view>

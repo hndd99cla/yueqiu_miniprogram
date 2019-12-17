@@ -1,0 +1,228 @@
+page {
+  background-color: white;
+}
+.centerPage-wrap .cover-thumb {
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 250rpx;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.centerPage-wrap .centerPage-user-info {
+  padding-left: 3%;
+  padding-right: 3%;
+
+  border-bottom: 1px solid #d8d8d8;
+  margin-top: 10px;
+  list-style: none;
+  line-height: 40px;
+  text-indent: 10px;
+  background-color: #fff;
+}
+.centerPage-wrap .centerPage-user-info1 {
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.centerPage-wrap .centerPage-user-info view {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+
+
+.centerPage-info-item {
+  height: 117rpx;
+  line-height: 117rpx;
+}
+.centerPage-wrap .nickname,
+.centerPage-wrap .userCenter-tel{
+  float: right;
+  border: none;
+  width: 65%;
+  line-height: 117rpx;
+  height: 117rpx;
+  margin-right: 25px;
+  color: #888;
+  font-size: 14px;
+}
+.centerPage-wrap .centerPage-sex {
+  height: 50px;
+}
+.centerPage-wrap .icon-rightarrow {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+}
+.del{
+ display: flex;
+}
+.name{
+ font-size: 30rpx
+}
+
+.navbar{ 
+ 
+ width: 100%;
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+ z-index: 2
+
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.navbar .item.active{ 
+ color: #FFCC00; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #FFCC00; 
+}
+
+.list{
+ padding-top: 82rpx;
+ height: 300rpx;
+}
+.list .btn{
+ margin-top:0rpx;
+ width: 100%;
+ height: 150rpx;
+ display: flex;
+ border-bottom:1px solid rgba(66, 24, 24, 0.245)
+}
+.list .btn .k{
+ padding-right: 100rpx;
+ width: 200rpx;
+}
+.list .btn .p{
+ display: flex;
+ width:400rpx; 
+ flex-direction: column;
+}
+
+.list .btn .p .p1{
+ position: relative;
+ left: -70rpx;
+ top:30rpx;
+ text-align-last: left;
+ text-indent: -40rpx;
+ font-size: 15px;
+}
+.fol{
+ width:120rpx;
+ height:60rpx;
+ margin-right:120rpx;
+ margin-top:100rpx;
+ font-size:25rpx;
+ color:rgba(41, 156, 223, 0.966);
+ background-color:white;
+ border:0.5rpx solid rgba(41, 156, 223, 0.966); 
+ line-height:55rpx;
+ text-indent: 4rpx;
+}
+.fol_{
+ width:120rpx;
+ height:60rpx;
+ margin-right:120rpx;
+ margin-top:100rpx;
+ font-size:21rpx;
+ color:rgba(66, 24, 24, 0.245);
+ background-color:white;
+ border:1px solid rgba(66, 24, 24, 0.245); 
+ line-height:55rpx;
+ text-indent: -7rpx;
+}
+.k{
+ display: flex;
+}
+.privateletter{
+ position: fixed;
+ width: 60rpx;
+ height: 60rpx;
+ right: 30rpx;
+ bottom:260rpx;
+ border-radius: 70%;
+}
+.star{
+ width:30rpx;
+ height:30rpx;
+ margin-left:30rpx;
+ margin-top:60rpx;
+}
+.comment_gap{
+ width:100%;
+ height:60rpx;
+ background-color:#eee;
+ margin-top:100rpx;
+}
+.comment{
+ font-size:33rpx;
+ line-height:70rpx;
+ text-indent:20rpx;
+ color: black;
+}
+.comment_detail{
+ display:flex;
+ flex-direction:column;
+ width:100%; 
+ border-bottom:1px solid rgba(66, 24, 24, 0.245)
+}
+.comment_icon{  
+ width:80rpx;
+ height:80rpx;
+ margin-left:30rpx;
+  border-radius: 60%;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+.comment_text{
+ font-size:32rpx;
+ margin-left:50rpx;
+ margin-right:50rpx;
+ margin-top:30rpx;
+ margin-bottom:30rpx;
+}
+.comment_date{
+ font-size:32rpx;
+ margin-left:500rpx;
+ margin-top:30rpx;
+ margin-bottom:30rpx;
+ color:gray;
+}
+.yop{
+ margin-top:10rpx;
+ border:10rpx;
+ background-color:white;
+}
+.icon_{
+ width:120rpx;
+ height:120rpx;
+ border-radius:50%;
+ margin-top:15rpx;
+ margin-left:25rpx
+}
+.arrow{
+ width:40rpx;
+ height:80rpx;
+ margin-top:50rpx;
+ margin-right:-100rpx;
+}

@@ -1,0 +1,65 @@
+ <view bindtap='uploadPost' class="postview">
+ <image src="{{matchList.match_post}}" class="post"></image>
+ </view>
+<view class="container">
+    <form bindsubmit="bindSave">
+    <view class="form-box">
+ 
+        <view class="row-wrap">
+            <view class="label">赛事名称</view>
+            <view class="label-right">
+                <input name="matchName" class="input" value='{{matchList.match_name}}'/>
+            </view>
+        </view>
+
+        <view class="row-wrap" bindtap="selectLocation">
+            <view class="label">地点</view>
+            <view class="label-right">
+                <input name="setLocation" disabled='true' class="input" value="{{matchList.match_location}}"/>
+            </view>           
+        </view>
+
+      <picker value="{{date}}" mode="date" start="" end="{{endDate}}" bindchange="changeDate">
+        <view class="row-wrap">
+            <view class="label">开始日期</view>
+            <view class="label-right">
+                <input disabled="true" name="startDate" class="input" type="text" value="{{matchList.match_date}}"/>
+            </view>
+        </view>
+      </picker>
+
+      <picker value="{{date}}" mode="date" start="{{now}}" end="{{endDate}}" bindchange="changeDate_">
+        <view class="row-wrap">
+            <view class="label">结束日期</view>
+            <view class="label-right">
+                <input disabled="true" name="overDate" class="input" type="text" value="{{matchList.match_overdate}}"/>
+            </view>
+        </view>
+      </picker>
+
+       <view class="row-wrap">
+            <view class="label">承办单位</view>
+            <view class="label-right">
+                <input name="matchUnit" class="input" value='{{matchList.match_unit}}'/>
+            </view>
+        </view>
+
+        <view class="row-wrap">
+            <view class="label">联系电话</view>
+            <view class="label-right">
+                <input name="matchPhone" class="input" maxlength="11" type="number" value='{{matchList.match_phone}}'/>
+            </view>
+        </view>
+
+        <view class="explain">
+            <view class="">赛事说明</view>
+            <view class="explain-down">
+                <textarea name="matchExplain" type="text" value='{{matchList.match_explain}}'/>
+            </view>
+         </view>
+
+    </view>
+
+    <button type="warn" class="save-btn" formType="submit">保存</button>
+    </form>
+</view>

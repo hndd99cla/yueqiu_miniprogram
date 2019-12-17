@@ -1,0 +1,145 @@
+.top{
+ display: flex;
+ width: 100%;
+ height: 70rpx;
+ background-color: #0097ff
+}
+.place{
+ width: 130rpx;
+ font-size: 31rpx;
+ line-height: 50rpx;
+ text-indent: 20rpx;
+}
+.search{
+ width: 500rpx;
+
+}
+.icon{
+ margin-top:15rpx;
+}
+.input{
+ background-color:white;
+ width:500rpx;
+ margin-left:20rpx;
+ margin-top:5rpx;
+ border-radius: 20rpx;
+ text-indent: 0rpx;
+ font-size: 30rpx;
+ padding-left: 20rpx;
+}
+.suo{
+ font-size: 30rpx;
+ margin-left: 20rpx;
+ margin-top: 10rpx;
+}
+.scroll_image{
+ height: 400rpx;
+}
+.near{
+ height: 280rpx;
+ background-color:rgb(235, 235, 235);
+}
+.near_text{
+ font-size: 34rpx;
+ font-weight: bold;
+ color: black;
+ text-indent: 30rpx;
+ line-height: 80rpx;
+ height: 80rpx;
+}
+.scroll_x{
+ display: block;
+ height: 180rpx;
+ width: 100%;
+ white-space: nowrap;
+}
+.tuijian_item{
+ width:360rpx;
+ height:160rpx;
+ margin-left:20rpx;
+ display: inline-block;
+ background-color: white;
+ border-radius: 20rpx;
+
+}
+.tuijian_text{
+ font-size: 34rpx;
+ font-weight: bold;
+ color: black;
+ text-indent: 30rpx;
+ line-height: 80rpx;
+ height: 80rpx;
+ 
+}
+.liebiao{
+ height:150rpx;
+ display:flex;
+}
+.scroll_x_1{
+ width: 100%;
+ white-space: nowrap;
+}
+.scroll_icon{
+ height: 80rpx;
+ width: 80rpx;
+ margin-left: 50rpx;
+ margin-top: 20rpx;
+}
+.icon_text{
+ font-size: 28rpx;
+ font-weight: bold;
+ text-indent: 65rpx;
+ line-height: 50rpx;
+}
+.zx{
+ display:inline-block;
+}
+.zx1{
+ display:flex;
+ flex-direction:column;
+}
+.z1{
+ font-size: 30rpx;
+ text-indent: 20rpx;
+ line-height: 80rpx;
+}
+.z2{
+ font-size: 30rpx;
+ text-indent: 20rpx;
+ line-height: 40rpx;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:1;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+.video{
+ background-color:white;
+}
+.v0{
+ display:flex;
+ flex-wrap:wrap;
+ margin-left:15rpx;
+ margin-top:20rpx;
+}
+.v1{
+ height: 320rpx;
+ width: 320rpx;
+ margin-left: 30rpx;
+ margin-bottom: 30rpx;
+ border: 1px solid rgba(66, 24, 24, 0.245);
+}
+.v2{
+ width: 320rpx;
+ height: 230rpx;
+}
+.v3{
+ font-size: 30rpx;
+ text-indent: 20rpx;
+}
+.ifno{
+ font-size: 31rpx;
+ margin-top: 20rpx;
+ text-align: center;
+ color: black
+}

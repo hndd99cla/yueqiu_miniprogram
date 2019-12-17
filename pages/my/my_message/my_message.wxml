@@ -1,0 +1,73 @@
+<!--顶部导航条-->
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>  
+<!--个人页面-->
+<view hidden="{{currentTab!==0}}">
+<view style='margin-top:80rpx;width:100%;height:100%'>
+<view class="li" data-index="0" bindtap='changeToggle'>
+<view class="left">球队申请</view>
+<view class="right"><text class="{{selectedFlag[0]?'down':'top'}}"/></view>
+</view>
+ <view hidden="{{!selectedFlag[0]}}">
+<block wx:for="{{messageList}}" wx:for-index="index">
+<view class="apply1">
+<navigator hover-class='none' url="/pages/other_information/other_information?openid={{messageList[index]._openid}}">
+<image src="{{messageList[index].icon}}" class="icon"></image> 
+</navigator>
+<view class="applytext" bindtap="checkMessage" data-id="{{messageList[index]._id}}">{{messageList[index].nick_name}}申请加入您的球队（{{messageList[index].team_name}}）</view>
+</view>
+</block>
+</view>
+
+<view class="li" data-index="1" bindtap='changeToggle'>
+<view class="left">消息列表</view>
+<view class="right"><text class="{{selectedFlag[1]?'down':'top'}}"/> 
+ </view>
+  </view>
+ <view hidden="{{!selectedFlag[1]}}">
+<block wx:for="{{noticeList}}" wx:for-index="index">
+<view class="notice">
+<navigator url="/pages/team_yueqiu_detail/team_yueqiu_detail?id={{noticeList[index].team_yueqiu_id}}&over_=0" hover-class='none'>
+<view class="apply">
+<view class="applytext">{{noticeList[index].content}}</view>
+</view> 
+</navigator>
+<image src="/images/deleteMessage.png" class="delete" bindtap="deleteMessage" data-id="{{noticeList[index]._id}}"></image>
+</view>
+</block>
+</view>
+</view>
+</view>
+
+<view hidden="{{currentTab!==1}}">
+
+<view style="margin-top:80rpx;">
+<block wx:for="{{yueqiuList}}" wx:for-index="index">
+<view class="notice">
+<navigator url="/pages/yueqiu_detailpage/yueqiu_detailpage?id={{yueqiuList[index].yueqiu_id}}&over=0" hover-class='none'>
+<view class="apply">
+<image src="/images/notice.png" class="notice_icon"></image>
+<view class="applytext">{{yueqiuList[index].content}}</view>
+</view> 
+</navigator>
+<image src="/images/deleteMessage.png" class="delete" bindtap="deleteMessage_" data-id="{{yueqiuList[index]._id}}"></image>
+</view>
+</block>
+</view>
+</view> 
+
+<view hidden="{{currentTab!==2}}">
+<view style='margin-top:80rpx'>
+<block wx:for="{{chatList}}" wx:for-index="index">
+<view class="apply_">
+<navigator hover-class='none' url="/pages/other_information/other_information?openid={{chatList[index]}}">
+<image src="{{iconList[index].avatarUrl}}" class="icon"></image>
+</navigator>
+<navigator hover-class='none' url='/pages/send_private_message/send_private_message?openid={{chatList[index]}}&nickName={{iconList[index].nickName}}'>
+<view class="applytext">{{iconList[index].nickName}}</view>
+</navigator> 
+</view>
+</block>
+</view>
+</view>

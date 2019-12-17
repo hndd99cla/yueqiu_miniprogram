@@ -1,0 +1,134 @@
+
+page{
+    height: 100%;
+}
+.container{
+    background-color: #f9f5f556;
+}
+.form-box{
+    width:100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.row-wrap{
+    width: 720rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    margin-left: 30rpx;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    font-size: 28rpx;
+}
+.row-wrap .label{
+    width: 160rpx;
+    color: #000
+}
+.row-wrap .label-right{
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.explain{
+ font-size: 29rpx;
+ padding-left: 30rpx;
+ padding-top: 20rpx; 
+}
+
+.explain-down{
+ margin-top: 20rpx;
+ padding-top: 5rpx;
+ width: 95%;
+ border-style: ridge;
+ padding-left: 8rpx;
+ height: 200rpx;
+}
+
+.save-btn,
+.cancel-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+}
+.save-btn{
+    margin-top:50rpx;
+    z-index: 2
+}
+.cancel-btn{
+ margin-top:30rpx;
+}
+
+.image{
+ height:60rpx;
+ width:60rpx;
+ border-radius:70%;
+ margin-top:15rpx;
+ margin-left:10rpx;
+}
+
+.location{
+ height:35rpx;
+ width:35rpx;
+ border-radius:70%;
+ margin-top:25rpx;
+ margin-left:15rpx;
+}
+.stars{
+  padding:40rpx 273rpx 60rpx 230rpx;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 1rpx solid #ececec;
+  background-color: #fff;
+}
+.stars .content view{
+  font-size: 32rpx;
+  color: #4a4a4a;
+}
+.stars .content>view:last-of-type{
+  height: 40rpx;
+  margin-top: 48rpx;
+}
+.stars .content>view:last-of-type view{
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 25rpx;
+  background-size: 100% 100%;
+}
+.list-msg2 {
+    height: 60rpx;
+    width: 250rpx;
+    margin-top: 20rpx;
+    margin-left: -200rpx;
+    text-indent: 30rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+}
+ 
+.select_box {
+    margin-left: -200rpx;
+    background-color: #eee;
+    padding: 0 10rpx;
+    width: 93%;
+    position: absolute;
+    top: 130rpx;
+    z-index: 1;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+.select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+}
+.id{
+ font-size: 30rpx;
+ color: #ccc;
+ margin-left: 30rpx;
+ margin-top: 10rpx;
+}
+

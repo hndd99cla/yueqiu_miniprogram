@@ -1,0 +1,60 @@
+<!--pages/launchBall/launchBall.wxml-->
+
+<view class="container">
+    <form bindsubmit="bindLaunch">
+    <view class="form-box">
+
+    <picker value="{{selectedNum}}" range="{{list}}" bindchange="changeNum">
+        <view class="row-wrap">
+            <view class="label">人数</view>
+            <view class="label-right">
+                <input disabled="true" name="setNum" class="input" type="text" placeholder="人数" value="{{list[selectedNum]}}" />
+            </view>
+        </view>
+     </picker>
+ 
+        <view class="row-wrap">
+            <view class="label">手机号码</view>
+            <view class="label-right">
+                <input name="phoneNum" class="input" maxlength="11" type="number" placeholder="11位手机号码"/>
+            </view>
+        </view>
+
+        <view class="row-wrap" bindtap="selectLocation">
+            <view class="label">地点</view>
+            <view class="label-right">
+                <input name="setLocation" class="input" placeholder="您的位置" value="{{mylocation}}"/>
+            </view>           
+        </view>
+
+      <picker value="{{date}}" mode="date" start="{{startDate}}" end="{{endDate}}" bindchange="changeDate">
+        <view class="row-wrap">
+            <view class="label">日期</view>
+            <view class="label-right">
+                <input disabled="true" name="setStartTime" class="input" type="text" placeholder="开始的日期" value="{{date}}"/>
+            </view>
+        </view>
+      </picker>
+
+      <picker value="12:30" mode="time" start="{{startTime}}" end="{{endTime}}" bindchange="changeTime">
+        <view class="row-wrap">
+            <view class="label">开始时间</view>
+            <view class="label-right">
+                <input disabled="true" name="" class="input" type="text" placeholder="开始时间" value="{{selectTime}}"/>
+            </view>
+        </view>
+       </picker>
+
+        <view class="explain">
+            <view class="">说明</view>
+            <view class="explain-down">
+                <textarea name="explain" type="text" style='width:680rpx'/>
+            </view>
+         </view>
+
+    </view>
+
+    <button type="warn" class="save-btn" formType="submit">发起</button>
+    </form>
+</view>
+

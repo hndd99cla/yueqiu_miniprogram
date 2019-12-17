@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/yueqiupage/yueqiupage",
+    "pages/matchpage/matchpage",
+    "pages/my/my",
+    "pages/yueqiupage_content/launchBall/launchBall",
+    "pages/yueqiu_detailpage/yueqiu_detailpage",
+    "pages/accredit/accredit",
+    "pages/my/my_yueqiu/my_yueqiu",
+    "pages/my/my_information/my_information",
+    "pages/other_information/other_information",
+    "pages/my/my_team/my_team",
+    "pages/my/my_team/found_team/found_team",
+    "pages/team_information/team_information",
+    "pages/yueqiupage_content/teamLaunchBall/teamLaunchBall",
+    "pages/team_yueqiu_detail/team_yueqiu_detail",
+    "pages/my/my_message/my_message",
+    "pages/my/my_follow/my_follow",
+    "pages/edit_yueqiu/edit_yueqiu",
+    "pages/edit_team_yueqiu/edit_team_yueqiu",
+    "pages/send_private_message/send_private_message",
+    "pages/my/my_match/my_match",
+    "pages/my/my_match/found_match/found_match",
+    "pages/manage_match/manage_match",
+    "pages/match_detail/match_detail",
+    "pages/match_detail_plus/match_detail_plus",
+    "pages/edit_match/edit_match",
+    "pages/search_result/search_result",
+    "pages/show_teamormember/show_teamormember"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0097ff",
+    "navigationBarTitleText": "首页"
+  },
+  "debug": false,
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff7f50",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepage.png"
+      },
+      {
+        "pagePath": "pages/yueqiupage/yueqiupage",
+        "text": "约球",
+        "iconPath": "images/yue.png",
+        "selectedIconPath": "images/yue.png"
+      },
+      {
+        "pagePath": "pages/matchpage/matchpage",
+        "text": "赛事",
+        "iconPath": "images/match.png",
+        "selectedIconPath": "images/match.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

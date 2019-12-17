@@ -1,0 +1,32 @@
+<view class="container">
+    <form bindsubmit="found">
+    <view class="form-box">
+
+        <view class="row-wrap" bindtap="doUpload">
+            <view class="label" >上传LOGO</view>
+                      <image src="{{image}}" class="image"></image>
+            <view class="label-right">
+
+            </view>
+        </view>
+
+        <view class="row-wrap">
+            <view class="label">球队名称</view>
+            <view class="label-right">
+                <input name="teamName" class="input" maxlength='4' placeholder=""/>
+            </view>
+        </view>
+
+        <view class="explain">
+            <view class="">说明</view>
+            <view class="explain-down">
+                <textarea name="teamExplain" type="text" style='width:690rpx'/>
+            </view>
+         </view>
+
+    </view>
+
+    <button type="warn" class="save-btn" formType="submit">创建</button>
+
+    </form>
+</view>

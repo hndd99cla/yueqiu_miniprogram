@@ -1,0 +1,98 @@
+<view class="page centerPage-wrap" id="userCenterPage" data-router="userCenterPage">
+  <view class="centerPage-user-info">
+<view class="k">
+<image class="cover-thumb" src="{{ userList.avatarUrl }}" ></image>
+ <view class="del">
+  <button class="fol" wx:if="{{mark==2}}" bindtap="follow" data-id="{{memberList[index].player_id}}">关注</button> 
+  <button class="fol_" wx:if="{{mark==1}}" bindtap="cancelFollow" data-id="{{memberList[index].player_id}}">已关注</button>
+  </view> 
+</view>
+
+ </view>
+
+<view class="yop">
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+
+<view hidden="{{currentTab!==0}}"> 
+
+<view class="centerPage-user-info"> 
+    <view class="centerPage-info-item" style='margin-top:-30rpx'>
+      <label >姓名</label>
+      <label class="ico-moon icon-rightarrow"></label>
+      <text class="nickname">{{list.my_name}}</text>
+    </view>
+
+    <view class="centerPage-info-item">
+      <label>昵称</label>
+      <label class="ico-moon icon-rightarrow"></label>
+      <text class="nickname">{{userList.nickName}}</text>
+    </view>
+
+    <view class="centerPage-info-item">
+      <label>位置</label>
+      <label class="ico-moon icon-rightarrow"></label>
+      <text class="nickname">{{list.my_place}}</text>
+    </view>
+
+
+<view class="centerPage-info-item" >
+      <label>身高</label>
+      <label class="ico-moon icon-rightarrow"></label>
+      <text class="userCenter-tel">{{list.my_height}}</text>
+    </view>
+    <view class="centerPage-info-item" >
+      <label>体重</label>
+      <label class="ico-moon icon-rightarrow"></label>
+      <text class="userCenter-tel">{{list.my_weight}}</text>
+    </view>
+  </view>
+
+      <view class="comment_gap">
+      <view class="comment">球友的评价</view>
+      </view>
+      <block wx:for="{{evaList}}">
+      <view class="comment_detail">
+      <view style='display:flex'>
+      <navigator hover-class='none' url="/pages/other_information/other_information?openid={{evaList[index]._openid}}">
+      <image src="{{evaList[index].icon}}" class='comment_icon'/>
+      </navigator>
+      <view><image src='/images/star_yellow.png' wx:for="{{evaList[index].score}}" class="star"/>
+      <image src='/images/star_gray.png' wx:for="{{5-evaList[index].score}}" class="star"/>
+      </view>
+      </view>
+      <view class="comment_text">{{evaList[index].comment}}</view>
+      <view class='comment_date'>{{evaList[index].date}}</view>
+      </view>
+      </block>
+     
+      
+  
+ 
+</view>
+
+
+<view hidden="{{currentTab!==1}}"> 
+<view class="centerPage-user-info1"> 
+<view class="list" style='margin-top:-100rpx;'>  
+<block wx:for="{{teamList}}" wx:for-index="index">
+<navigator hover-class="none" url= "/pages/team_information/team_information?id={{teamList[index].team_id}}&flag={{flag[index]}}">
+<view class="btn">
+<view class="k"><image src="{{teamList[index].team_logo_fileid}}" class="icon_"/></view>
+<view class="p">
+<view class="p1">{{teamList[index].team_name}}</view>
+</view>
+<view class="p_"><image src="/images/member_53_53.png" class="arrow"/></view>
+</view>
+</navigator>
+</block>
+</view>
+</view>
+</view>
+
+</view>
+
+
+<image src="/images/privateletter.png" class="privateletter" wx:if="{{priMess}}" bindtap="sendMessage"></image>
+</view>

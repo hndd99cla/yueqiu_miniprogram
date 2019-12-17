@@ -1,0 +1,121 @@
+ 
+<view class="page">
+<!--顶部导航条-->
+
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>  
+
+<!--个人页面-->
+<view hidden="{{currentTab!==0}}"> 
+<view class="x" wx:if="{{mylist.length>0}}">
+<block wx:for="{{mylist}}" wx:for-index="index">
+<view class="list" >
+<navigator url="../yueqiu_detailpage/yueqiu_detailpage?id={{mylist[index]._id}}&over=0" hover-class='none'>
+<view class="a1"><view class="a3">发起人：</view><image class="a2" src="{{mylist[index].i_image}}"/></view>
+<view class="btn">
+<view class="k">
+<view style='display:flex'><view class="k_1">{{dayList[index]}}</view><view class='k_2'>天</view></view>
+<view class='k_3'>倒计时</view>
+</view>
+<view class="p">
+<view class="p1">时间：{{mylist[index].i_date}}  {{mylist[index].i_time}}</view>
+<view class="p1">地点：{{mylist[index].i_location}}</view>
+</view>
+</view>
+</navigator>
+<view class="redtip">
+<view class="btn-down">{{numList[index]}}</view>
+<view class="dayaway">距离:{{myDis[index]}}km</view>
+</view>
+</view>
+</block>
+</view> 
+<view class="ifno" wx:else>没有约球哦~</view>
+</view>  
+
+
+<!--球队页面-->
+<view hidden="{{currentTab!==1}}"> 
+
+<view class='x'>
+<block wx:for="{{teamList}}">
+<view class="list">
+<navigator url="/pages/team_yueqiu_detail/team_yueqiu_detail?id={{teamList[index]._id}}&over_=0" hover-class='none'>
+<view class="a1"><view class="a3">发起球队：</view><image class="a2" src="{{teamList[index].team_logo}}"/></view>
+<view class="btn">
+<view class="k"> 
+<view style='display:flex'><view class="k_1">{{day1List[index]}}</view><view class='k_2'>天</view></view>
+<view class='k_3'>倒计时</view>
+</view>
+<view class="p">
+<view class="p1">时间：{{teamList[index].team_date}}</view>
+<view class="p1">地点：{{teamList[index].team_location}} 　　类型：{{teamList[index].game_type}}</view>
+</view>
+</view>
+</navigator>
+<view class="redtip">
+<view class="btn-down">{{teamInf[index]}}</view>
+<view class="dayaway">距离:{{myTeamDis[index]}}km</view>
+</view>
+</view>
+</block>
+</view>
+
+</view>
+
+
+<!--圆形点击框  -->
+<view class="round-click{{hide1?'':'3'}}">
+   <image src="/images/add.png" class="pic" bindtap="add" animation="{{animationData}}"></image>
+</view>
+<view class="round-click{{hide2?'2':'3'}}" wx:if="{{currentTab!=1}}">
+   <image src="/images/lookfor.png" class="pic" bindtap="lookfor" animation="{{animationData1}}"></image>
+</view>
+
+<view class="float {{isRuleTrue?'isRuleShow':'isRuleHide'}}" catchtouchmove="ture">
+      <view class="buju">
+    <image src="/images/person.png" class="floatimage1" bindtap="launchBall"></image>
+      <view class="floattext1" bindtap="launchBall">个人发起</view>
+      </view>
+      <view class="buju">
+    <image src="/images/team.png" class="floatimage2" bindtap="teamLaunch"></image>
+      <view class="floattext2" bindtap="teamLaunch">球队发起</view>
+      </view>         
+</view> 
+<!--遮罩层-->
+<view class="float1 {{isRuleTrue1?'isRuleShow':'isRuleHide'}}" catchtouchmove="ture">
+      <view class="floattext3">人数</view>
+      <view class="k1{{lessten?'_':''}}" bindtap="pick1">
+       <view class="k2{{lessten?'_':''}}">小于10人</view>
+      </view>
+      <view class="k3{{greatten?'_':''}}" bindtap="pick2">
+       <view class="k4{{greatten?'_':''}}">大于10人</view>
+      </view>
+      <view class="floattext4">时间</view>
+      <view class="k5{{three?'_':''}}" bindtap="pick3">
+       <view class="k6{{three?'_':''}}">3天内</view>
+      </view>
+      <view class="k7{{seven?'_':''}}" bindtap="pick4">
+       <view class="k8{{seven?'_':''}}">7天内</view>
+      </view>
+      <view class="k9{{sevenlater?'_':''}}" bindtap="pick5">
+       <view class="k10{{sevenlater?'_':''}}">7天后</view>
+      </view>
+      <view class="floattext5">距离</view>
+      <view class="k11{{fivek?'_':''}}" bindtap="pick6">
+       <view class="k12{{fivek?'_':''}}">5公里内</view>
+      </view>
+      <view class="k13{{tenk?'_':''}}" bindtap="pick7">
+       <view class="k14{{tenk?'_':''}}">10公里内</view>
+      </view>
+
+      <button class="showAll" bindtap="show">显示全部</button>
+
+      
+      <button class="queren" bindtap="showForSearch">确认</button>
+
+
+</view>
+
+</view>

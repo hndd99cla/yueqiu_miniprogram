@@ -1,0 +1,115 @@
+<view class="member_1" >
+ <scroll-view scroll-y class="member_2" >
+ 
+  <view class="member_4" >
+   <view class="member_5" >
+    <navigator hover-class="none" url="../my/my_information/my_information">
+    <image src="{{avatarUrl}}" class="member_6" ></image>
+    </navigator> 
+       <view class="member_7" >
+         <text class="member_8" >{{nickName}}</text>
+          <view class="member_9" >
+           <image src="" style=" width:20rpx;height:29rpx;"  border="0"   bindtap=""  class="member_10" ></image>
+           <text class="member_11" >{{city}}</text>
+          </view>
+       </view>
+   </view>
+  </view>
+
+  <view class="member_12" >
+
+   <view class="member_13" bindtap='daiding'>
+    <view class="member_14" >
+     <text class="member_15" >0元</text>
+     <text class="member_16" >余额</text>
+    </view>
+   </view>
+
+   <view class="member_17" >
+    <view class="member_18" >
+     <text class="member_19" >{{fans}}个</text>
+     <text class="member_20" >粉丝</text>
+    </view>
+   </view>
+
+   <view class="member_70" >
+    <view class="member_71" >
+     <text class="member_72" >{{follow}}个</text>
+     <text class="member_73" >关注</text>
+    </view>
+   </view>
+  
+  </view>
+
+<view class="member_25" >
+ <view class="member_26" >
+    
+    <view class="member_27" bindtap="toMyinformation">     
+     <view class="member_28" >
+      <view class="member_29" >
+       <image src="/images/bas.png" style="width:39rpx;height:39rpx;" border="0"class="member_30"/>
+       <text class="member_31" >我的约球</text> 
+      </view>
+        <image src="/images/arr.png" style="width:20rpx;height:39rpx;" border="0" class="member_32"/>
+     </view>
+        <view class="member_33" />
+    </view>
+                         
+  <view class="member_34" bindtap='toMyMatch'>
+   <view class="member_35" >
+    <view class="member_36" >
+     <image src="/images/mat.png" style="width:39rpx;height:39rpx;" border="0" class="member_37"/>
+     <text class="member_38" >我的赛事</text>
+    </view>
+     <image src="/images/arr.png" style="width:20rpx;height:39rpx;" border="0" class="member_39"/>
+   </view>
+   <view class="member_40" />
+  </view>
+                        
+  <view class="member_41" bindtap="toMyteam">
+   <view class="member_42" >
+    <view class="member_43" >
+     <image src="/images/tea.png" style="width:39rpx;height:39rpx;" border="0" class="member_44"/>
+     <text class="member_45" >我的球队</text>
+    </view>
+      <image src="/images/arr.png" style="width:20rpx;height:39rpx;" border="0" class="member_46"/>
+   </view>
+   <view class="member_47" />
+  </view>
+
+  <view class="member_48" bindtap="toMyFollow">
+   <view class="member_49" >
+    <view class="member_50" >
+     <image src="/images/fol.png" style="width:39rpx;height:39rpx;" border="0" class="member_51"/>
+     <text class="member_52">我的关注</text>
+    </view>
+     <image src="/images/arr.png" style="width:20rpx;height:39rpx;" border="0" class="member_53"/>
+   </view>
+      <view class="member_100" />
+  </view>
+
+<navigator url="/pages/my/my_message/my_message" hover-class='none'>
+  <view class="member_48" style="padding-top:25rpx">
+   <view class="member_49" >
+    <view class="member_50" >
+     <image src="/images/mes.png" style="width:39rpx;height:39rpx;" border="0" class="member_51"/>
+     <text class="member_52" >我的消息</text>
+    </view>
+     <image src="/images/arr.png" style="width:20rpx;height:39rpx;" border="0" class="member_53"/>
+   </view>
+   <view class="member_100" />
+  </view>
+  </navigator>
+
+
+                 
+ </view>
+ 
+</view>
+
+
+               
+              
+          </scroll-view>
+          
+     </view>

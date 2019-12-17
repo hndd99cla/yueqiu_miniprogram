@@ -1,0 +1,71 @@
+.top{
+ height: 1080rpx;
+}
+.message{
+ display: flex;
+}
+.my{
+ display: flex;
+ flex-direction: row-reverse;
+ height: 120rpx;
+ width: 620rpx;
+ margin-left: 130rpx;
+ margin-top: 20rpx;
+
+}
+.qipao{
+ padding-right: 20rpx;
+ background-color:#cdcdcd ;
+ margin-top:30rpx;
+ border-radius:30rpx;
+ max-width: 500rpx; 
+}
+.content{
+ padding-left: 20rpx;
+ font-size: 31rpx;
+ line-height: 70rpx;
+ text-align: justify;
+ word-break: break-all;
+ 
+}
+.icon{
+ width:90rpx;
+ height:90rpx;
+ margin-left:10rpx;
+  border-radius: 60%;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+.other{
+ display: flex;
+ flex-direction:row;
+ height: 120rpx;
+ width: 620rpx;
+ margin-left:0rpx;
+ margin-top: 20rpx;
+}
+.down{
+ width: 750rpx;
+ margin-left: 10rpx;
+ display: flex;
+
+ 
+}
+.chat{
+ font-size: 32rpx;
+ height: 70rpx;
+ width: 650rpx;
+ margin-left: 10rpx;
+ border-bottom:1px solid rgba(66, 24, 24, 0.245);
+}
+.send{
+ height: 50rpx;
+ width: 50rpx;
+ margin-top: 20rpx;
+ margin-left: 20rpx;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}

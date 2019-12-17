@@ -1,0 +1,54 @@
+<view class="result">查询结果</view> 
+<view class="z1">个人约球</view>
+<view class="line1"/> 
+<view class="x" wx:if="{{searchList.length>0}}">
+<block wx:for="{{searchList}}" wx:for-index="index" >
+<view class="list">
+<navigator url="../yueqiu_detailpage/yueqiu_detailpage?id={{searchList[index]._id}}&over=0" hover-class='none'>
+<view class="a1"><view class="a3">发起人：</view><image class="a2" src="{{searchList[index].i_image}}"/></view>
+<view class="btn"> 
+<view class="k">
+<view style='display:flex'><view class="k_1">{{dayList[index]}}</view><view class='k_2'>天</view></view>
+<view class='k_3'>倒计时</view>
+</view>
+<view class="p">
+<view class="p1">时间：{{searchList[index].i_date}}  {{searchList[index].i_time}}</view>
+<view class="p1">地点：{{searchList[index].i_location}}</view>
+</view>
+</view>
+</navigator>
+<view class="redtip">
+<view class="btn-down">{{numList[index]}}</view>
+<view class="dayaway">距离:{{myDis[index]}}km</view>
+</view>
+</view>
+</block>
+</view>
+<view class='ifno' wx:else>没有结果哦~</view>
+
+<view class="z1">团队约球</view>
+<view class="line1"/> 
+<view class='x'  wx:if="{{searchList_.length>0}}">
+<block wx:for="{{searchList_}}">
+<view class="list">
+<navigator url="/pages/team_yueqiu_detail/team_yueqiu_detail?id={{searchList_[index]._id}}&over_=0" hover-class='none'>
+<view class="a1"><view class="a3">发起球队：</view><image class="a2" src="{{searchList_[index].team_logo}}"/></view>
+<view class="btn">
+<view class="k">
+<view style='display:flex'><view class="k_1">{{day1List[index]}}</view><view class='k_2'>天</view></view>
+<view class='k_3'>倒计时</view>
+</view>
+<view class="p">
+<view class="p1">时间：{{searchList_[index].team_date}}</view>
+<view class="p1">地点：{{searchList_[index].team_location}}　　类型：{{searchList_[index].game_type}}</view>
+</view>
+</view>
+</navigator>
+<view class="redtip">
+<view class="btn-down">{{statusList[index]}}</view>
+<view class="dayaway">距离:{{myTeamDis[index]}}km</view>
+</view>
+</view>
+</block>
+</view>
+<view class='ifno' wx:else>没有结果哦~</view>

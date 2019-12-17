@@ -1,0 +1,73 @@
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>  
+ 
+<!--全部-->
+<view hidden="{{currentTab!==0}}"> 
+<scroll-view scroll-y class="round1">
+<image src="/images/nostart.png" class="nostart"></image>
+<block wx:for="{{yueqiuList}}" wx:for-index="index">
+
+<view class="list">
+<navigator hover-class="none" url="/pages/yueqiu_detailpage/yueqiu_detailpage?id={{yueqiuList[index]._id}}&over=0" class="inf">
+<view class="place">{{yueqiuList[index].i_location}}</view>
+<view class="time">{{yueqiuList[index].i_date}} {{yueqiuList[index].i_time}}</view>
+</navigator>
+<navigator url="/pages/edit_yueqiu/edit_yueqiu?id={{yueqiuList[index]._id}}" hover-class="none">
+<image src="/images/edit.png" class="edit" wx:if="{{editList[index]}}"></image>
+</navigator>
+</view> 
+ 
+</block>
+</scroll-view>
+<scroll-view scroll-y class="round2">
+<image src="/images/over.png" class="over"></image>
+<block wx:for="{{yueqiuList_}}" wx:for-index="index">
+<view class="list">
+<navigator hover-class="none" url="/pages/yueqiu_detailpage/yueqiu_detailpage?id={{yueqiuList_[index]._id}}&over=1" class="inf">
+<view class="place">{{yueqiuList_[index].i_location}}</view>
+<view class="time">{{yueqiuList_[index].i_date}} {{yueqiuList_[index].i_time}}</view>
+</navigator>
+
+<image src="/images/del_.png" class="edit" bindtap="delRec" data-id="{{yueqiuList_[index]._id}}"></image>
+
+</view>
+
+</block>
+</scroll-view>
+</view>
+
+<view hidden="{{currentTab!==1}}"> 
+
+<scroll-view scroll-y class="round1">
+<image src="/images/nostart.png" class="nostart"></image>
+<block wx:for="{{yueqiuTeamList}}" wx:for-index="index">
+
+<view class="list">
+<navigator hover-class="none" url="/pages/team_yueqiu_detail/team_yueqiu_detail?id={{yueqiuTeamList[index]._id}}&over_=0" class="inf">
+<view class="place">{{yueqiuTeamList[index].team_location}}</view>
+<view class="time">{{yueqiuTeamList[index].team_date}} {{yueqiuTeamList[index].team_time}}</view>
+</navigator>
+<navigator url="/pages/edit_team_yueqiu/edit_team_yueqiu?id={{yueqiuTeamList[index]._id}}" hover-class="none">
+<image src="/images/edit.png" class="edit" wx:if="{{editTeamList[index]}}"></image>
+</navigator>
+</view>
+ 
+</block>
+</scroll-view>
+<scroll-view scroll-y class="round2">
+<image src="/images/over.png" class="over"></image>
+<block wx:for="{{yueqiuTeamList_}}" wx:for-index="index">
+
+<view class="list">
+<navigator hover-class="none" url="/pages/team_yueqiu_detail/team_yueqiu_detail?id={{yueqiuTeamList_[index]._id}}&over_=1" class="inf">
+<view class="place">{{yueqiuTeamList_[index].team_location}}</view>
+<view class="time">{{yueqiuTeamList_[index].team_date}} {{yueqiuTeamList_[index].team_time}}</view>
+</navigator>
+<image src="/images/del_.png" class="edit" bindtap="delRec_" data-id="{{yueqiuTeamList_[index]._id}}"></image>
+</view>
+
+</block>
+</scroll-view>
+
+</view>

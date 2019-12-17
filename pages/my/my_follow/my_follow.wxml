@@ -1,0 +1,13 @@
+ <block wx:for="{{list}}" wx:for-index="index">
+  <view class="mem2">
+    <navigator hover-class="none" url="/pages/other_information/other_information?openid={{list[index]._openid}}">
+  <view class="mem3">
+  <image src="{{list[index].avatarUrl}}" class="image1"/>
+  <view class="nickname">{{list[index].nickName}}</view>
+  <image wx:if="{{list[index].sex==1}}" src="/images/male.png" class="image2"/>
+  <image wx:if="{{list[index].sex==2}}" src="/images/female.png" class="image2"/>
+  <view class="place">{{list[index].city}}</view>   
+  </view> 
+    </navigator>
+  </view>
+  </block>

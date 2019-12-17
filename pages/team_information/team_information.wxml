@@ -1,0 +1,64 @@
+<view class="member_4" >
+   <view class="member_5" > 
+
+    <image src="{{list.team_logo_fileid}}" style=" width:127rpx;height:126rpx;border-radius:70%"  border="0"  class="member_6" ></image>
+
+       <view class="member_7" >
+         <text class="member_8" wx:if="{{flag!=3}}">{{list.team_name}}</text>
+         <text class="member_8" wx:if="{{flag==3}}" bindtap="modal1">{{list.team_name}}</text>
+         <modal hidden="{{modal1}}" title="请输入球队名" confirm-text="修改" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1">  
+    <input type="text" bindchange="setTeamName"/>  
+         </modal>  
+          <view class="member_9" >
+           <text class="member_11" >球队成员{{teamNum}}</text>
+          </view>
+       </view>
+   </view>
+  </view>
+ 
+  <view class="intro">
+  <view class="intro1" wx:if="{{flag!=3}}"><text class="text">球队简介：{{list.team_explain}}</text></view>
+  <view class="intro1" wx:if="{{flag==3}}" bindtap="modal2"><text class="text">球队简介：{{list.team_explain}}</text></view>
+
+  <modal hidden="{{modal2}}" title="请输入球队简介" confirm-text="修改" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2">  
+    <input type="text" bindchange="setExplain"/>  
+         </modal>  
+  </view>
+  <view class="gap"></view>
+  <view class="mem"><view class="mem1">球队成员</view></view>
+
+  <scroll-view scroll-y class="display">
+  <block wx:for="{{memberList}}" wx:for-index="index">
+  <view class="mem2">
+  <view class="mem3">
+  <navigator hover-class="none" url="/pages/other_information/other_information?openid={{memberList[index].player_id}}&icon={{memberList[index].icon}}">
+  <image src="{{memberList[index].icon}}" class="image1"/>
+  </navigator>
+  <view class="nickname">{{memberList[index].nickName}}</view>
+  <image wx:if="{{memberList[index].sex==1}}" src="/images/male.png" class="image2"/>
+  <image wx:if="{{memberList[index].sex==2}}" src="/images/female.png" class="image2"/>
+  <view class="captain" wx:if="{{memberList[index]._openid==memberList[index].player_id}}">队长</view>    
+  </view>
+  <view class="del">
+  <button class="fol" wx:if="{{flag!=3&mark[index]==false&openid!=memberList[index].player_id}}" bindtap="follow" data-id="{{memberList[index].player_id}}">关注</button> 
+  <button class="fol_" wx:if="{{flag!=3&mark[index]==true}}" bindtap="cancelFollow" data-id="{{memberList[index].player_id}}">已关注</button>
+
+  <image src="/images/delete.png" class="delete" wx:if="{{flag==3&memberList[index]._openid!=memberList[index].player_id}}" bindtap="delMember" data-id="{{memberList[index].player_id}}" data-teamid="{{memberList[index].team_id}}"></image>
+  </view> 
+  </view>
+  </block>
+  </scroll-view>
+   
+ <view class="btn_view" wx:if="{{flag==0}}">
+ <button class="btn_" bindtap="manageTeam">管理球队</button>
+ </view>
+ <view class="btn_view" wx:if="{{flag==1}}">
+ <button class="btn_" bindtap="exit">退出球队</button>
+ </view>
+ <view class="btn_view" wx:if="{{flag==2}}">
+ <button class="btn_" bindtap="join">申请加入</button>
+ </view>
+  <view class="btn_view" wx:if="{{flag==3}}">
+ <button class="btn_" style="background-color:green" bindtap="save" data-save="{{}}">保存</button>
+ </view>
+

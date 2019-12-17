@@ -1,0 +1,42 @@
+ <view class="navbar">  
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>  
+<!--全部-->
+<view hidden="{{currentTab!==0}}"> 
+<view class="list">
+<block wx:for="{{joinList}}" wx:for-index="index">
+<navigator hover-class="none" url='/pages/match_detail_plus/match_detail_plus?id={{joinList[index][0]._id}}'>
+<view class="btn">
+<view class="k"><image src="{{joinList[index][0].match_post}}" class='match_post'></image></view>
+<view class="p">
+<view class="p1">{{joinList[index][0].match_name}}</view>
+</view>
+<view class="p_"><image src="/images/member_53_53.png" class="arrow"/></view>
+</view>
+</navigator>
+</block>
+</view>
+
+</view>
+
+<view hidden="{{currentTab!==1}}"> 
+<view class="list">
+<block wx:for="{{matchList}}" wx:for-index="index">
+<view class="btn">
+<view class="k"><image src="{{matchList[index].match_post}}" class='match_post'></image></view>
+<view class="p">
+<view class="p1">{{matchList[index].match_name}}</view>
+</view>
+<view class="p_">
+<navigator hover-class='none'   url="/pages/manage_match/manage_match?id={{matchList[index]._id}}">
+<image src="/images/set.png" style=" width:60rpx;height:60rpx;margin-top:50rpx;margin-right:20rpx"/>
+</navigator>
+</view>
+</view>
+
+</block>
+</view>
+
+</view>
+
+<button class="btn_" bindtap="foundMatch">创建赛事</button>

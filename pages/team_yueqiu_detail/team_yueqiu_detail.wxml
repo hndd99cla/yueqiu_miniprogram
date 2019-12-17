@@ -1,0 +1,40 @@
+ 
+<view class="pkPost" style="background-image:url(/images/background1.jpg)">
+<view class="post">
+<view class="left">
+<image src="{{icon}}" class="lefticon" bindtap='to'></image>
+</view>
+<view class="center"><image src="/images/pk.png" class="pkicon"></image></view>
+<view class="right" wx:if="{{mark==0}}"><image src="{{opponent}}" class="righticon" bindtap='chooseTeam' style='margin-top:150rpx'></image></view>
+<view class="right" wx:if="{{mark==1}}"><image src="{{opponent}}" class="righticon" bindtap='look'></image></view>
+</view>
+</view>
+
+<view class="gap"></view>
+
+<view class="k">
+<image src="/images/board.png" class="board"></image>
+</view>
+
+<view class="time">
+<view class="timetext">时间：{{list.team_date}}    {{list.team_time}}</view>
+</view>
+
+<view class="position" bindtap='lookLocation'>
+<view class="positiontext">地点：{{list.team_location}}</view>
+<image src="/images/location.png" class="location"></image>
+</view>
+
+<view class="type">
+<view class="typetext">类型：{{list.game_type}}</view>
+</view>
+
+<view class="intro">
+  <view class="intro1"><text class="text">说明：{{list.team_explain}}</text></view>
+  </view>
+
+ <view class="btn_view">
+ <button class="btn_" wx:if="{{disabled==0}}" disabled='true'>约战</button>
+ <button class="btn_" bindtap="exit" wx:if="{{disabled==1&over_!=1}}">退出</button>
+ <button class="btn_" bindtap="fight" wx:if="{{disabled==2}}">约战</button>
+ </view>

@@ -1,0 +1,42 @@
+ <view class="navbar">  
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>  
+<!--全部-->
+<view hidden="{{currentTab!==0}}"> 
+
+<view class="list" wx:if="{{myFound.length>0}}">
+<block wx:for="{{myFound}}" wx:for-index="index">
+<navigator hover-class="none" url= "/pages/team_information/team_information?id={{myFound[index].team_id}}&flag=0">
+<view class="btn">
+<view class="k"><image src="{{myFound[index].team_logo_fileid}}" class='team_logo'></image></view>
+<view class="p">
+<view class="p1">{{myFound[index].team_name}}</view>
+</view>
+<view class="p_"><image src="/images/member_53_53.png" class="arrow"/></view>
+</view>
+</navigator>
+</block>
+</view>
+<view class="ifno" wx:else>您没有创建过球队哦~</view>
+
+</view>
+
+<view hidden="{{currentTab!==1}}"> 
+<view class="list" wx:if="{{myJoin.length>0}}">
+<block wx:for="{{myJoin}}" wx:for-index="index">
+<navigator hover-class="none" url= "/pages/team_information/team_information?id={{myJoin[index].team_id}}&flag=1">
+<view class="btn">
+<view class="k"><image src="{{myJoin[index].team_logo_fileid}}" class='team_logo'></image></view>
+<view class="p">
+<view class="p1">{{myJoin[index].team_name}}</view>
+</view>
+<view class="p_"><image src="/images/member_53_53.png" class="arrow"/></view>
+</view>
+</navigator>
+</block>
+</view>
+<view class="ifno" wx:else>您没有加入过球队哦~</view>
+
+</view>
+
+<button class="btn_" bindtap="foundTeam">创建球队</button>

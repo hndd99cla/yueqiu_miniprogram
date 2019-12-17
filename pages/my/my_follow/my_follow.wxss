@@ -1,0 +1,64 @@
+.mem2{
+ margin-left: 25rpx;
+ width: 95%;
+ height: 150rpx;
+ border-bottom:1px solid rgba(66, 24, 24, 0.245);
+ display: flex
+
+}
+.mem3{
+ display: flex;
+ width: 500rpx;
+}
+.image1{
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 60%;
+  margin-top: 25rpx;
+  overflow: hidden;
+}
+.nickname{
+  font-size: 11px;
+  padding-top: 50rpx;
+  margin-left: 20rpx;
+}
+.image2{
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 30rpx;
+  padding-top: 35rpx;
+}
+
+.del{
+ width: 100rpx;
+ padding-left: 100rpx;
+}
+
+
+.fol{
+ width:140rpx;
+ height:60rpx;
+ margin-left:-60rpx;
+ margin-top:55rpx;
+ font-size:25rpx;
+ color:rgba(41, 156, 223, 0.966);
+ background-color:white;
+ border:0.5rpx solid rgba(41, 156, 223, 0.966); 
+ line-height:51rpx
+}
+.fol_{
+ width:140rpx;
+ height:60rpx;
+ margin-left:-60rpx;
+ margin-top:55rpx;
+ font-size:22rpx;
+ color:rgba(66, 24, 24, 0.245);
+ background-color:white;
+ border:1px solid rgba(66, 24, 24, 0.245); 
+ 
+}
+.place{
+ font-size: 29rpx;
+ margin-top: 40rpx;
+ margin-left: 20rpx;
+}

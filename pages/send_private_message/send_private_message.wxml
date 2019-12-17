@@ -1,0 +1,18 @@
+<scroll-view scroll-y class="top">
+<block wx:for="{{content}}" wx:for-index="index">
+<view class="message" style="height:{{50+num[index]}}rpx">
+<view class="{{mark[index]?'my':'other'}}" >
+<image src="{{content[index].icon}}" class="icon"></image>
+<view class="qipao" style="height:{{num[index]}}rpx;margin-left:10rpx;">
+<view class="content">{{content[index].content}}</view>
+</view>
+</view>
+</view>
+</block>
+
+</scroll-view>
+
+<view class="down">
+<input class="chat" name="message" bindinput='getMessage' placeholder='发送消息' value="{{clear}}"></input>
+<image src="/images/send.png" class="send" bindtap="sendMessage"></image>
+</view>

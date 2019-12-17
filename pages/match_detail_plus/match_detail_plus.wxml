@@ -1,0 +1,115 @@
+ <view class="container">
+  <!--左侧栏--> 
+  <view class="nav_left">
+    <block wx:for="{{cateItems}}" wx:key="id">
+      <!--当前项的id等于item项的id，那个就是当前状态-->
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+    </block>
+  </view>
+  <!--右侧栏-->
+  
+  <view class="nav_right">
+
+    <view wx:if="{{curNav==1}}">
+       <block wx:for="{{teamList}}" wx:for-index="index" >
+       
+        <view class="nav_right_items" wx:if="{{teamList.length>0}}">
+          <navigator hover-class="none" url="/pages/team_information/team_information?id={{teamList[index].team_id}}&flag=4">
+            <image src="{{teamList[index].team_logo}}" class="icon"></image>
+          </navigator>
+            <view class="teamname">{{teamList[index].team_name}}</view>
+        </view>
+        <view class="rebound" wx:else>暂无球队~</view>
+      </block>
+      
+    </view>
+
+    <view wx:if="{{curNav==2}}">     
+        
+<block wx:for="{{dateList}}" wx:for-index="index">
+       <view class="li" data-index="{{index}}">
+         <view class="left">{{dateList[index][0]}}</view>
+         <view class="right">
+       </view>       
+       </view>
+       <block wx:for="{{numList[index]}}" wx:for-index="num">
+       <view style='display:flex;margin-top:10rpx'>
+       <view  class="saicheng" style="text-indent:30rpx;margin-top:8rpx;">{{dateList[index][num+1][0]}} {{dateList[index][num+1][1]}} {{dateList[index][num+1][2]}}:{{dateList[index][num+1][3]}} {{dateList[index][num+1][4]}}</view>    
+       </view>
+       </block>
+</block>
+    </view>
+
+<view wx:if="{{curNav==3}}">
+<view class="li" data-index="0" bindtap='changeToggle'>
+<view class="left">球队战绩</view>
+<view class="right"><text class="{{selectedFlag[0]?'down':'top'}}"/> 
+ </view>
+  </view>
+<view hidden="{{!selectedFlag[0]}}">
+<block wx:for="{{groupList}}" wx:for-index="index">
+       <view class="li" data-index="{{index}}">
+         <view class="left">{{groupList[index][0]}}</view>
+         <view class="right">
+         </view>    
+       </view>
+       <view class="vic_de"><view class="data_teamname">球队名</view><view class="sheng">胜</view><view class="fu">负</view></view>
+       <block wx:for="{{numList_[index]}}" wx:for-index="num">
+       <view style="display:flex">
+       <view class="data_teamname1">{{groupList[index][num+1][0]}}</view>  
+       <view class='sheng1'>{{groupList[index][num+1][1]}}</view>
+       <view class='fu1'>{{groupList[index][num+1][2]}}</view>
+       </view>
+       </block>        
+       </block>
+
+
+</view>
+<view class="li" data-index="1" bindtap='changeToggle'>
+<view class="left">得分榜</view>
+<view class="right"><text class="{{selectedFlag[1]?'down':'top'}}"/> 
+ </view>
+  </view>
+<view hidden="{{!selectedFlag[1]}}">
+<view class="vic_de"><view style='width:180rpx;margin-left:50rpx'>球员</view><view style='margin-left:60rpx'>场均得分</view></view>
+<block wx:for="{{scoreList}}" wx:for-index="index">
+       <view style="display:flex">
+       <view class="player">{{scoreList[index][0]}}</view>  
+       <view class='avfen'>{{scoreList[index][1]}}</view>
+       </view>
+       </block>
+</view>
+
+<view class="li" data-index="2" bindtap='changeToggle'>
+<view class="left">篮板榜</view>
+<view class="right"><text class="{{selectedFlag[2]?'down':'top'}}"/> 
+ </view>
+  </view>
+<view hidden="{{!selectedFlag[2]}}">
+<view class="rebound">暂无数据~</view>
+</view>
+
+<view class="li" data-index="3" bindtap='changeToggle'>
+<view class="left">助攻榜</view>
+<view class="right"><text class="{{selectedFlag[3]?'down':'top'}}"/> 
+ </view>
+  </view>
+<view hidden="{{!selectedFlag[3]}}">
+<view class="rebound">暂无数据~</view>
+</view>
+</view>
+
+
+<view wx:if="{{curNav==4}}">
+<view class="rebound">暂无其他信息~</view>
+</view>
+  </view>
+
+
+    
+
+
+  
+
+</view>

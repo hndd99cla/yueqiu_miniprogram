@@ -1,0 +1,58 @@
+<view class="container"> 
+    <form bindsubmit="bindSave">
+    <view class="form-box">
+
+ 
+        <view class="row-wrap">
+            <view class="label">我的球队</view>
+            <view class="label-right">
+                <input disabled="true" name="setName" class="input" value="{{teamName}}"/>
+            </view>           
+        </view>
+
+        <view class="row-wrap" bindtap="selectType">
+            <view class="label">对战类型</view>
+            <view class="label-right">
+                <input disabled="true" name="setType" class="input" value="{{list.game_type}}"/>
+                <image src="/images/member_53_53.png" class="arrow"></image>
+            </view>
+        </view>
+
+        <view class="row-wrap" bindtap="selectLocation">
+            <view class="label">地点</view>
+            <view class="label-right">
+                <input name="setLocation" disabled="true" class="input" value="{{list.team_location}}"/>
+            </view>           
+        </view>
+
+      <picker value="{{date}}" mode="date" start="{{startDate}}" end="{{endDate}}" bindchange="changeDate">
+        <view class="row-wrap">
+            <view class="label">日期</view>
+            <view class="label-right">
+                <input disabled="true" name="setDate" class="input" type="text" value="{{list.team_date}}"/>
+            </view>
+        </view>
+      </picker>
+
+      <picker value="12:30" mode="time" start="{{startTime}}" end="{{endTime}}" bindchange="changeTime">
+        <view class="row-wrap">
+            <view class="label">开始时间</view>
+            <view class="label-right">
+                <input disabled="true" name="setTime" class="input" type="text" value="{{list.team_time}}"/>
+            </view>
+        </view>
+       </picker>
+
+        <view class="explain">
+            <view class="">说明</view>
+            <view class="explain-down">
+                <textarea name="setExplain" type="text" value="{{list.team_explain}}"/>
+            </view>
+         </view>
+
+    </view>
+
+    <button class="save-btn" formType="submit">保存</button>
+    <button type="warn" class="cancel-btn" bindtap="delTeamYueqiu">删除</button>
+    </form>
+</view>

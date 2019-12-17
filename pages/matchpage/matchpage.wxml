@@ -1,0 +1,16 @@
+<view class="page">
+<block wx:for="{{matchList}}"> 
+<navigator hover-class="none" url="/pages/match_detail/match_detail?id={{matchList[index]._id}}">
+<view class="item">
+<image class="post" src="{{matchList[index].match_post}}"></image>
+<view class="name">{{matchList[index].match_name}}</view>
+<view class="inf">
+   <view class="status">{{statusList[index]}}</view>
+   <view class="date">{{matchList[index].match_date}} 至 {{matchList[index].match_overdate}}</view> 
+</view> 
+</view>
+</navigator>
+</block>
+</view>
+
+

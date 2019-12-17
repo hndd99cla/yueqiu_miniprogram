@@ -1,0 +1,74 @@
+<view class="top">
+<view class="place">{{city}}</view>
+<view class="search">
+<view style='display:flex'><icon type='search' size='30rpx' color='black' class="icon"/><input class='input' placeholder='查找约球位置或约球ID' bindinput='getData'/></view>
+</view>
+<view class="suo" bindtap='search'>搜索</view>
+</view>
+
+<swiper indicator-dots='true' circular='true' class="scroll_image" bindchange="swiperChange" current="{{swiperCurrent}}">
+<block wx:for="{{imageList}}">
+<swiper-item bindtap="postNav">
+<image src="{{item}}" style='width:100%' width="450" height="200" />
+</swiper-item>
+</block> 
+</swiper>
+
+<view class='near'>
+<view class='near_text'>附近约球</view>
+<scroll-view scroll-x class='scroll_x' wx:if="{{tuijian.length>0}}">
+<block wx:for="{{tuijian}}">
+<view class="tuijian_item" bindtap='toYueqiu' data-id="{{tuijian[index]._id}}">
+<view class="z1">{{tuijian[index].i_date}} {{tuijian[index].i_time}}</view>
+<view class='z2'>{{tuijian[index].i_location}}</view>
+</view>
+</block>
+</scroll-view>
+<view class="ifno" wx:else>没有约球哦~</view>
+</view>
+
+<view class="liebiao">
+<scroll-view scroll-x="true"  class='scroll_x_1' >
+<view class='zx'>
+<view class="zx1">
+<image class="scroll_icon" src="/images/team2.png" bindtap="showTeam" />
+<text class="icon_text">球队</text>
+</view>
+</view>
+<view class="zx">
+<view class="zx1">
+<image class="scroll_icon" src="/images/player.png" bindtap='showFriend'/>
+<text class="icon_text">球友</text>
+</view>
+</view>
+
+
+</scroll-view>
+</view>
+
+
+
+<view class='video'>
+<view class='tuijian_text' style='background-color:rgb(235, 235, 235);'>推荐视频</view>
+<view class="v0">
+<view class='v1'>
+<video src="" class="v2"></video>
+<view class="v3">NBA十佳球</view>
+</view>
+<view class='v1'>
+<video src="" class="v2" ></video>
+<view class="v3">NBA精彩视频</view>
+</view>
+<view class='v1'>
+<video src="" class="v2"></video>
+<view class="v3">篮球教学视频，教你如何成为大神</view>
+</view>
+<van-button type="warning">haha</van-button>
+</view>
+
+
+
+
+</view>
+
+

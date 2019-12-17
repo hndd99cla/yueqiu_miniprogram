@@ -1,0 +1,205 @@
+page{  
+  background: #fff;  
+}  
+/*总体主盒子*/  
+.container {  
+  position: relative;  
+  width: 100%;  
+  height: 100%;  
+  background-color: #fff;  
+  color: #939393;  
+}
+ /*左侧栏主盒子*/  
+.nav_left{  
+  /*设置行内块级元素（没使用定位）*/  
+  display: inline-block;  
+  width: 25%;  
+  height: 100%;  
+  background: #fff;  
+  text-align: center;  
+}  
+/*左侧栏list的item*/  
+.nav_left .nav_left_items{  
+  /*每个高30px*/  
+  height: 40px;  
+  /*垂直居中*/  
+  line-height: 40px;  
+  /*再设上下padding增加高度，总高42px*/  
+  padding: 6px 0;  
+  /*只设下边线*/  
+  border-bottom: 1px solid #dedede;  
+  /*文字14px*/  
+  font-size: 14px; 
+}  
+/*左侧栏list的item被选中时*/  
+.nav_left .nav_left_items.active{  
+  /*背景色变成白色*/  
+  background: #fff;  
+  color: #3385ff; 
+  border-left: 3px solid #3385ff;
+}  
+/*右侧栏主盒子*/  
+.nav_right{  
+  /*右侧盒子使用了绝对定位*/  
+  position: absolute;  
+  top: 0;  
+  right: 0;  
+  flex: 1;  
+  /*宽度75%，高度占满，并使用百分比布局*/  
+  width: 75%;  
+  height: 1000px;  
+  padding: 10px;  
+  box-sizing: border-box;  
+  background-color:rgb(235, 235, 235);
+}  
+/*右侧栏list的item*/  
+.nav_right .nav_right_items{  
+  /*浮动向左*/  
+  float: left;  
+  /*每个item设置宽度是33.33%*/  
+  width: 33.33%;  
+  height: 120px;  
+  text-align: center;  
+}  
+.nav_right .nav_right_items .icon{  
+  /*被图片设置宽高*/  
+  width: 60px;  
+  height: 60px;  
+  margin-top: 15px;  
+  border-radius: 50%;
+}  
+.nav_right .nav_right_items text{  
+  /*给text设成块级元素*/  
+  display: block;  
+  margin-top: -40rpx;  
+  font-size: 14px;  
+  color: black;
+  /*设置文字溢出部分为...*/  
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+} 
+.teamname{
+ margin-top: 10rpx;
+ margin-left: 10rpx;
+ font-size: 35rpx;
+ overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis; 
+}
+.nodata_text
+{
+  color: black;
+  font-size: 14px;  
+  text-align: center;  
+} 
+.addDate{
+ font-size: 34rpx;
+ margin-top: 20rpx;
+}
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  margin-top:20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  border-top: 1rpx solid #f1f1f1;
+}
+.result{
+ display: flex;
+}
+.input{
+ margin-left: 30rpx;
+ font-size: 32rpx;
+}
+.ti{
+ position: relative;
+ width: 40rpx;
+ height: 40rpx;
+ z-index: 3;
+ right: -70rpx;
+ bottom: 150rpx;
+}
+.bg-gray{
+    background-color: #ccc!important;
+    border-bottom: 1rpx solid  #fff!important;
+}
+.top{
+   display: inline-block;  
+   border-top: 1px solid #ccc;
+   border-right: 1px solid #ccc;  
+   width: 12px;
+   height: 12px;  
+   transform: rotate(135deg);    
+}
+ .down{
+   display: inline-block;  
+   border-top: 1px solid #ccc;
+   border-right: 1px solid #ccc;  
+   width: 12px;
+   height: 12px;  
+   transform: rotate(315deg);    
+}
+.vic_de{
+  display: flex;
+  font-size: 37rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  margin-top:20rpx;
+  height: 60rpx;
+  
+}
+.saicheng{
+ font-size: 34rpx;
+ overflow: hidden;  
+ white-space: nowrap;  
+ text-overflow: ellipsis; 
+}
+.data_teamname{
+ width:180rpx;
+ line-height:40rpx;
+ margin-left: 40rpx;
+}
+.sheng{
+ margin-left:100rpx;
+ line-height:40rpx;
+}
+.fu{
+ margin-left:100rpx;
+ margin-top:3rpx;
+}
+.data_teamname1{
+ width:180rpx;
+ margin-top:30rpx;
+ margin-left: 40rpx;
+}
+.sheng1{
+ margin-left:100rpx;
+ width:50rpx;
+ margin-top:30rpx
+}
+.fu1{
+ margin-left:90rpx;
+ margin-top:30rpx
+}
+.player{
+ width:180rpx;
+ margin-top:30rpx;
+ margin-left: 50rpx;
+}
+.avfen{
+ margin-left:60rpx;
+ width:50rpx;
+ margin-top:30rpx
+}
+.rebound{
+ font-size: 35rpx;
+ text-align: center;
+ margin-top: 30rpx;
+}
+
+
